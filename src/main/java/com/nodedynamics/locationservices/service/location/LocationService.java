@@ -77,7 +77,8 @@ public class LocationService implements BaseService<LocationModel>{
 
 	@Override
 	public Mono<String> GetAll() {
-	
+
+		log.info(gson.toJson(repo.findAll()));
 		return Mono.just(gson.toJson(repo.findAll()));
 	}
 

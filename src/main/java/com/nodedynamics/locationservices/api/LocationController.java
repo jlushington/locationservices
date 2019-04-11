@@ -40,8 +40,9 @@ public class LocationController {
     	return service.Get(gson.fromJson(request, LocationModel.class));
     }
 	
+	@CrossOrigin(origins = "*") //TODO: NEED TO REMOVE AND INIT PROPER CORS
 	@GetMapping(value = "/getalllocation")
-	public Mono<String> GetAllLocation(@RequestBody String request){
+	public Mono<String> GetAllLocation(){
     	return service.GetAll();
     }
 	
