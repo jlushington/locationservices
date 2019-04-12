@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,8 +40,9 @@ Logger log = LoggerFactory.getLogger(LocationTypeController.class);
     	return service.Get(gson.fromJson(request, LocationTypeModel.class));
     }
 	
+	@CrossOrigin(origins = "*") //TODO: NEED TO REMOVE AND INIT PROPER CORS
 	@GetMapping(value = "/getalllocationtype")
-	public Mono<String> GetAllLocationType(@RequestBody String request){
+	public Mono<String> GetAllLocationType(){
     	return service.GetAll();
     }
 	
