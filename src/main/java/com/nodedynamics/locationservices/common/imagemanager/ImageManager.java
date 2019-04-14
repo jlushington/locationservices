@@ -6,24 +6,16 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-
 import javax.imageio.ImageIO;
-
 import org.bson.internal.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
-import com.amazonaws.services.s3.AmazonS3ClientBuilder;
-import com.amazonaws.services.s3.model.Bucket;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.PutObjectRequest;
-import com.amazonaws.util.StringUtils;
 import com.nodedynamics.locationservices.common.Global;
 import com.nodedynamics.locationservices.common.Util;
 import com.nodedynamics.locationservices.model.common.ImageModel;
