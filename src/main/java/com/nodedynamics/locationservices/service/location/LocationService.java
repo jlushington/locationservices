@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.WebSession;
-
 import com.google.gson.Gson;
 import com.nodedynamics.locationservices.common.Global;
 import com.nodedynamics.locationservices.model.common.ResponseModel;
@@ -19,8 +18,7 @@ import reactor.core.publisher.Mono;
 public class LocationService implements BaseService<LocationModel>{
 	
 	Logger log = LoggerFactory.getLogger(LocationService.class);
-	
-	private WebSession Session;
+
 	
 	@Autowired
 	private LocationRepository repo;
